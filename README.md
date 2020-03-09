@@ -1,4 +1,4 @@
-# Introduction
+# Chain ski
 
 This is an experimental project dedicated to a new concept of running gear. The
 idea is to make something similar to continuous track, but with rollers fixed
@@ -59,3 +59,8 @@ creates rail contour in `svg` format using ellipse equidistant formula.
 Produced `.svg` file is imported into FreeCAD model as path and used to create
 rail shape (in fact, several files with different distance are used to create
 rail profile).
+
+# License and author
+
+This project is created by [Nikolay Nagorskiy](mailto:nikolaynag@gmail.com) and
+published here under the terms of [CC BY-SA 4.0](LICENSE.txt).
