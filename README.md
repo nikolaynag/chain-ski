@@ -2,11 +2,11 @@
 
 This is an experimental project dedicated to a new concept of running gear. The
 idea is to make something similar to continuous track, but with rollers fixed
-on chain links instead of a vehicle. Each link of the track chain a bogie that
-rolls over a closed-loop rail mounted on the vehicle. Two adjacent links share
-same axle and rail contour is carefully calculated to provide continuous
+on chain links instead of a vehicle. Each link of the track chain is a bogie
+that rolls over a closed-loop rail mounted on the vehicle. Two adjacent links
+share same axle. Rail contour is carefully calculated to provide continuous
 whole-loop rolling. The mechanism does not involve any sliding friction and
-in theory can provide a good alternative for inline  skates, at least on rough
+in theory can provide a good alternative to inline  skates, at least on rough
 or soft surfaces.
 
 # Construction
@@ -16,20 +16,24 @@ assembly is made using standard inline skate components: ball bearings, bearing
 spacers and axle. Two variants are possible: with three bearings per axis and
 with two bearings per axis.
 
-In the first case link is mounted between spacers on one side and outer race
-of central bearing on the other. Two bearings at sides of each axle work as
-wheels rolling over the rail.
+In the first case each axle assembly consists of three bearings separated by
+two spacers and tightened with axle. The link is mounted between spacers on one
+axle and outer race of central bearing on the other. Two bearings at sides of
+each axle work as wheels rolling over the rail.
 
-In the second case link is mounted between outer race of bearings on two axles
-(both straight and diagonal link direction is possible). Wheels are mounted on
-both sides of an axle and rotate in unison very similar to railroad car wheels.
-In this case each link has less support and separate wheels are required, but
-it has great potential because wheels synchronization could give additional
+In the second case each axle assembly consists of two bearings with spacer in
+between, two wheels aside and axle holding everything together. Inner races of
+bearings, spacer, wheels and axle itself rotate in unison similar to railroad
+car axle. Link is mounted between outer race of bearings of two axles (both
+lateral and diagonal placement are possible).
+
+In the second case link has only two points of support. It also requires
+separate wheels which should be hard enough and round enough. But it is very
+interesting because synchronized wheels rotation could be used for
 stabilization with slightly conical wheels (like in traditional railway).
 
-First variant seems to be simpler to build (because it does not need separate
-wheels) so currently link and axle models in this repository are made for this
-variant.
+Nevertheless currently I am working on first variant between it seems simpler
+to build.
 
 # Tools and included files
 
@@ -42,13 +46,12 @@ via `FullAssemblyPreview` group (it consists of clones of all necessary parts).
 
 One of the most challenging part of design is to determine trajectory which
 axes should travel when mechanism works. It could not be arbitrary because
-wheels could go off the rail in this case.
+wheels should not go off the rail all along.
 
 After some mathematical research it was decided to make trajectory from
 two lines and two specially selected ellipses. Condition for selected ellipse
 is visualized in `optimal-ellipse-statement.svg` file. Numerical solution for
-such ellipse is found with `wxMaxima` tool and stored in `optimal-ellipse.wxmx`
-file.
+such ellipse is found with `wxMaxima` (see `optimal-ellipse.wxmx` file).
 
 As far as rail contour should be equidistant from axes trajectory, we need an
 equidistant of ellipse in our design. A python script `equidistant-svg.py`
