@@ -9,6 +9,8 @@ whole-loop rolling. The mechanism does not involve any sliding friction and
 in theory can provide a good alternative to inline  skates, at least on rough
 or soft surfaces.
 
+![Chain ski prototype](assembly-preview.png)
+
 # Construction
 
 The mechanism is made out of 3 key elements: axle assembly, link and rail. Axle
